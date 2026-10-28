@@ -1,10 +1,4 @@
-export type PromiseStatus =
-  | 'fulfilled'
-  | 'partially_fulfilled'
-  | 'in_progress'
-  | 'not_fulfilled'
-  | 'cannot_verify'
-
+export type PromiseStatus = 'fulfilled' | 'partially_fulfilled' | 'in_progress' | 'not_fulfilled' | 'cannot_verify'
 export type DataSourceType = 'real' | 'illustrative' | 'unverified'
 export type EvidenceType = 'official' | 'news' | 'illustrative'
 
@@ -12,10 +6,8 @@ export interface Party {
   id: string
   name: string
   slug: string
-  description?: string
-  logo?: string
-  initials?: string
-  promiseCount?: number
+  initials: string
+  number: number
   dataSourceType: DataSourceType
 }
 
